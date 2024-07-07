@@ -1,0 +1,13 @@
+sudo: required #super user priv to use docker
+services:
+  - docker
+
+before_install:
+  - docker build -t toxiczeina/docker-react -f Dockerfile.dev .
+
+script:
+  - docker run -e CI=true toxiczeina/docker-react npm run test 
+  # -e CI=true to make test suite exit as soon as the tests are done and not wait for input from the user
+
+
+  
