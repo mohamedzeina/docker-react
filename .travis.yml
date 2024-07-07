@@ -9,5 +9,17 @@ script:
   - docker run -e CI=true toxiczeina/docker-react npm run test 
   # -e CI=true to make test suite exit as soon as the tests are done and not wait for input from the user
 
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-north-1"
+  app: "docker"
+  env: "Dcoker-env"
+  bucket_name: "elasticbeanstalk-eu-north-1-53560517095"
+  bucket_path: "docker"
+  on:
+    branch: master #only push code when master branch gets updated
+  access_key_id: $AWS_ACCESS_KEY 
+  secret_access_key: "$AWS_SECRET_KEY"
 
+  
   
