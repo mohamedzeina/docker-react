@@ -9,7 +9,11 @@ First, clone the repo to your local machine:
 ```
 git clone https://github.com/mohamedzeina/docker-react.git
 ```
-Then, open up a terminal in the project's directory and run the following command:
+Then move into the project's directory:
+```
+cd docker-react
+```
+Then, run the following command:
 ```
 docker-compose -f docker-compose-dev.yml up --build
 ```
