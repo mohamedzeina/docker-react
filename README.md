@@ -7,7 +7,7 @@ This application is production-ready for deployment on AWS. Travis CI is configu
 Make sure that you have Docker installed on your local machine   
 First, clone the repo to your local machine:
 ```
-https://github.com/mohamedzeina/docker-react.git
+git clone https://github.com/mohamedzeina/docker-react.git
 ```
 Then, open up a terminal in the project's directory and run the following command:
 ```
